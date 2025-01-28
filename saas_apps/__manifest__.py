@@ -7,7 +7,7 @@
     "category": "Marketing",
     # "live_test_url": "http://apps.it-projects.info/shop/product/DEMO-URL?version=14.0",
     "images": ["/images/attention.jpg"],
-    "version": "15.0.1.0.1",
+    "version": "16.0.1.1.0",
     "application": False,
     "author": "IT-Projects LLC, Vildan Safin",
     "support": "apps@it-projects.info",
@@ -30,13 +30,16 @@
             "saas_apps/static/src/css/calculator.css",
             "saas_apps/static/src/js/saas_apps.js",
         ],
-        "web.assets_backend": ["saas_apps/static/src/js/refresh_button.js"],
-        "web.assets_qweb": ["saas_apps/static/src/xml/base.xml"],
+        "web.assets_backend": [
+            "saas_apps/static/src/js/refresh_button.js",
+            "saas_apps/static/src/xml/base.xml"
+        ],
+        
     },
     "post_load": None,
     "pre_init_hook": None,
     "post_init_hook": None,
     "uninstall_hook": None,
     "auto_install": False,
-    "installable": False,
+    "installable": True,
 }
