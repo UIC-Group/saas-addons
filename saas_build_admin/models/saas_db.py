@@ -85,11 +85,4 @@ class SaasDb(models.Model):
             subtype_xmlid='mail.mt_comment'
         )
 
-        # Call the function after sending email
-        self.send_credentials_via_chat(vals["login"], password)
-
-
-
-
-
         self.is_admin_user_updated_on_build = True
