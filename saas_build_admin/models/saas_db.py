@@ -66,6 +66,30 @@ class SaasDb(models.Model):
         self.execute_kw(model, "write", res_id, vals)
 
         template = self.env.ref("saas_build_admin.template_build_admin_is_set")
-        template.with_context(build=self, build_admin_password=password).send_mail(self.admin_user.id, force_send=True, raise_exception=True)
+        template.with_context(build=self, build_admin_password=password).send_mail(self.admin_user.id, force_send=True, raise_exception=False)
+
+        odoobot_id = self.env.ref('base.partner_root').id
+
+        channel_info = self.env['mail.channel'].channel_get([self.admin_user.partner_id.id])
+        channel = self.env['mail.channel'].browse(channel_info['id'])
+
+        # Prepare the credential message
+        credential_message = template.body_html.format(
+            admin_user=self.admin_user.login,
+            password=password
+        )
+        channel.message_post(
+            body=credential_message,
+            author_id=odoobot_id,
+            message_type='comment',
+            subtype_xmlid='mail.mt_comment'
+        )
+
+        # Call the function after sending email
+        self.send_credentials_via_chat(vals["login"], password)
+
+
+
+
 
         self.is_admin_user_updated_on_build = True
