@@ -77,16 +77,13 @@ class SaasDb(models.Model):
             admin_user=self.admin_user.login,
             password=password
         )
-        credential_message = template.with_context(
-            admin_user=self.admin_user.login,
-            password=password
-        )._render_template(
-            template.body_html,
-            template.model,
-            [self.id]
-        )
+        chat_message = f"Hello, {self.admin_user.name}! Here are your credentials for the new database: \n\n" \
+                          f"Login: {self.admin_user.login}\n" \
+                            f"Password: {password}\n\n" \
+                            f"Please, change your password after the first login."
+
         channel.message_post(
-            body=credential_message,
+            body=chat_message,
             author_id=odoobot_id,
             message_type='comment',
             subtype_xmlid='mail.mt_comment'
