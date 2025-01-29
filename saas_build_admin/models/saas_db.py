@@ -73,10 +73,17 @@ class SaasDb(models.Model):
         channel_info = self.env['mail.channel'].channel_get([self.admin_user.partner_id.id])
         channel = self.env['mail.channel'].browse(channel_info['id'])
 
-        # Prepare the credential message
         credential_message = template.body_html.format(
             admin_user=self.admin_user.login,
             password=password
+        )
+        credential_message = template.with_context(
+            admin_user=self.admin_user.login,
+            password=password
+        )._render_template(
+            template.body_html,
+            template.model,
+            [self.id]
         )
         channel.message_post(
             body=credential_message,
