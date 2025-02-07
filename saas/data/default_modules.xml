@@ -173,4 +173,80 @@
         <field name="name">todo_list</field>
         <field name="description">To-Do List</field>
     </record>
+    <record id="emr_lis_results" model="saas.module">
+        <field name="name">emr_lis_results</field>
+        <field name="description">EMR LIS Results</field>
+    </record>
+    <record id="emr_ris_results" model="saas.module">
+        <field name="name">emr_ris_results</field>
+        <field name="description">EMR RIS Results</field>
+    </record>
+    <record id="emr_fis_results" model="saas.module">
+        <field name="name">emr_fis_results</field>
+        <field name="description">EMR FIS Results</field>
+    </record>
+    <record id="cosmetology" model="saas.module">
+        <field name="name">cosmetology</field>
+        <field name="description">Cosmetology</field>
+    </record>
+    <record id="admission_lis_result" model="saas.module">
+        <field name="name">admission_lis_result</field>
+        <field name="description">Admission LIS Result</field>
+    </record>
+    <record id="admission_ris_result" model="saas.module">
+        <field name="name">admission_ris_result</field>
+        <field name="description">Admission RIS Result</field>
+    </record>
+    <record id="admission_fis_result" model="saas.module">
+        <field name="name">admission_fis_result</field>
+        <field name="description">Admission FIS Result</field>
+    </record>
+    <record id="admission_operation_result" model="saas.module">
+        <field name="name">admission_operation_result</field>
+        <field name="description">Admission Operation Result</field>
+    </record>
+    <record id="account_reports" model="saas.module">
+        <field name="name">account_reports</field>
+        <field name="description">Account Reports</field>
+    </record>
+    <record id="admission_stock" model="saas.module">
+        <field name="name">admission_stock</field>
+        <field name="description">Admission Stock</field>
+    </record>
+    <record id="his_crm" model="saas.module">
+        <field name="name">his_crm</field>
+        <field name="description">HIS CRM</field>
+    </record>
+    <record id="operation_lis_result" model="saas.module">
+        <field name="name">operation_lis_result</field>
+        <field name="description">Operation LIS Result</field>
+    </record>
+    <record id="operation_ris_result" model="saas.module">
+        <field name="name">operation_ris_result</field>
+        <field name="description">Operation RIS Result</field>
+    </record>
+    <record id="operation_fis_result" model="saas.module">
+        <field name="name">operation_fis_result</field>
+        <field name="description">Operation FIS Result</field>
+    </record>
+    <record id="todo_list_lis" model="saas.module">
+        <field name="name">todo_list_lis</field>
+        <field name="description">To-Do List LIS</field>
+    </record>
+    <record id="todo_list_ris" model="saas.module">
+        <field name="name">todo_list_ris</field>
+        <field name="description">To-Do List RIS</field>
+    </record>
+    <record id="todo_list_fis" model="saas.module">
+        <field name="name">todo_list_fis</field>
+        <field name="description">To-Do List FIS</field>
+    </record>
+    <record id="todo_list_visit" model="saas.module">
+        <field name="name">todo_list_visit</field>
+        <field name="description">To-Do List Visit</field>
+    </record>
+    <record id="field_data_template" model="saas.module">
+        <field name="name">field_data_template</field>
+        <field name="description">Field Data Template</field>
+    </record>
 </odoo>
