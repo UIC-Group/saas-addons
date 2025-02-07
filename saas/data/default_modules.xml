@@ -133,4 +133,44 @@
         <field name="name">repair</field>
         <field name="description">Repairs</field>
     </record>
+    <record id="his" model="saas.module">
+        <field name="name">his</field>
+        <field name="description">HIS</field>
+    </record>
+    <record id="ris" model="saas.module">
+        <field name="name">ris</field>
+        <field name="description">RIS</field>
+    </record>
+    <record id="fis" model="saas.module">
+        <field name="name">fis</field>
+        <field name="description">FIS</field>
+    </record>
+    <record id="admission" model="saas.module">
+        <field name="name">admission</field>
+        <field name="description">Admission</field>
+    </record>
+    <record id="day_hospital" model="saas.module">
+        <field name="name">day_hospital</field>
+        <field name="description">Day Hospital</field>
+    </record>
+    <record id="his_reports" model="saas.module">
+        <field name="name">his_reports</field>
+        <field name="description">HIS Reports</field>
+    </record>
+    <record id="his_sale_global_discount" model="saas.module">
+        <field name="name">his_sale_global_discount</field>
+        <field name="description">HIS Sale Global Discount</field>
+    </record>
+    <record id="his_stom" model="saas.module">
+        <field name="name">his_stom</field>
+        <field name="description">HIS Stomatology</field>
+    </record>
+    <record id="operation" model="saas.module">
+        <field name="name">operation</field>
+        <field name="description">Operation</field>
+    </record>
+    <record id="todo_list" model="saas.module">
+        <field name="name">todo_list</field>
+        <field name="description">To-Do List</field>
+    </record>
 </odoo>
